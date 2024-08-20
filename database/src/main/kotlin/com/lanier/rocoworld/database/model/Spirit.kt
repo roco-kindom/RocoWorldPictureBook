@@ -20,17 +20,14 @@ data class Spirit(
     @ColumnInfo(name = "first_id") val firstID: String,
     @ColumnInfo(name = "get_from") val getForm: String,
     @ColumnInfo(name = "description") val description: String,
-
     @ColumnInfo(name = "hp") val sm: String,
     @ColumnInfo(name = "attack") val wg: String,
     @ColumnInfo(name = "defence") val fy: String,
     @ColumnInfo(name = "magic_attack") val mg: String,
     @ColumnInfo(name = "magic_defence") val mk: String,
     @ColumnInfo(name = "speed") val sd: String,
-
     @ColumnInfo(name = "evolution_form_id") val evolutionFormID: String,
     @ColumnInfo(name = "evolution_to_ids") val evolutionToIDs: String,
-
     @ColumnInfo(name = "endTime") val endTime: String,
     @ColumnInfo(name = "expType") val expType: String,
     @ColumnInfo(name = "property") val property: String,
@@ -127,6 +124,51 @@ data class Spirit(
 
         override fun newArray(size: Int): Array<Spirit?> {
             return arrayOfNulls(size)
+        }
+
+        fun build(
+            name: String,
+            properties: String,
+            height: String,
+            weight: String,
+            src: String,
+            desc1: String,
+            desc2: String,
+        ): Spirit {
+            return Spirit(
+                id = "",
+                name = name,
+                property = properties,
+                height = height,
+                weight = weight,
+                src = src,
+                description = "$desc1|$desc2",
+                iconSrc = "",
+                interest = "",
+                color = "",
+                group = "",
+                firstID = "",
+                getForm = "",
+                sm = "",
+                wg = "",
+                fy = "",
+                mg = "",
+                mk = "",
+                sd = "",
+                evolutionFormID = "",
+                evolutionToIDs = "",
+                endTime = "",
+                expType = "",
+                habitat = "",
+                isInBook = "",
+                mType = "",
+                mspeed = "",
+                previewSrc = "",
+                propoLevel = "",
+                skinNum = "",
+                state = "",
+                catchRate = ""
+            )
         }
     }
 
