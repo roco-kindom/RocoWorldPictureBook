@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "RocoWorldPictureBook"
 include(":app")
- 
+include(":database")
+include(":domain")
+include(":presentation")
